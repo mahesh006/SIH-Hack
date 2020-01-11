@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <head>
-    <!-- Latest compiled and minified CSS -->
+   
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-    <!-- Optional theme -->
+   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/azsearch.js@0.0.21/dist/AzSearch.css">
@@ -59,38 +59,35 @@
                 </div>
             </div>
         </div>
-        <!-- Bootstrap core JavaScript
-            ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
+       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
 </body>
-<!-- Dependencies -->
+
 <script src="https://cdn.jsdelivr.net/react/15.5.0/react.min.js"></script>
 <script src="https://cdn.jsdelivr.net/react/15.5.0/react-dom.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/redux/3.6.0/redux.min.js"></script>
-<!-- Main -->
+
 <script src="https://cdn.jsdelivr.net/npm/azsearch.js@0.0.21/dist/AzSearch.bundle.js"></script>
 <script>
-    // Initialize and connect to your search service
+    
     var automagic = new AzSearch.Automagic({ index: "azureblob-index", queryKey: "6A30F42729EDFEFD4ED63C9C5CC72EAE", service: "traildemo" });
     
     const resultTemplate = `<div class="col-xs-12 col-sm-3 col-md-3 result_img" >
             <img class="img-responsive result_img" src={{metadata_storage_path}} alt="image not found" />
         </div> <div>TAGS:{{imageTags}}</div><div>Text extracted:{{text}}</div>`;
 
-    // add a results view using the template defined above
+    
     automagic.addResults("results1", { count: true }, resultTemplate);
     
-    // Adds a pager control << 1 2 3 ... >>
     automagic.addPager("pager");
     
         automagic.addSearchBox("searchBox");
         
     
 
-    // Adds a button to clear any applied filters
+    
     automagic.addClearFiltersButton("clearFilters");
 </script>
 <style>
